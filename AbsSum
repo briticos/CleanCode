@@ -1,0 +1,44 @@
+/*
+Absolute Sum
+
+Take an array of integers (positive or negative or both) and return 
+the sum of the absolute value of each element.
+
+*/
+
+#include <iostream>
+#include <vector>
+
+int getAbsSum(std::vector <int> ArrayValue){
+    int sum;
+
+    for(int aux:ArrayValue){
+        if(aux>0)
+            sum+=aux;
+        else{
+            aux=aux*-1;
+            sum+=aux;
+        }
+
+    }
+
+}
+
+int main() {
+    std::vector <int> ArrayValue;
+
+    int AuxVar,sizeArray=0;
+
+    while(std::cin>>AuxVar){
+        std::cin>>AuxVar;
+        ArrayValue.resize(sizeArray+1);
+        ArrayValue.at(sizeArray)=AuxVar;
+        sizeArray++;
+    }
+    
+    //как остановить цикл когда пользователь перестает вводить данные?
+
+    getAbsSum(ArrayValue);
+
+    return 0;
+}
